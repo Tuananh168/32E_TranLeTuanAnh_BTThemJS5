@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" style="margin-bottom: 500px;">
+        <h3>Bài tập 3 :Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số người phụ thuộc). Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau:</h3>
+        <div class="alert alert-primary">
+            Công thức : Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr <br> Thu nhập chịu thuế: (đến 60) triệu thuế xuất 5%<br> Thu nhập chịu thuế: (trên 60 đến 120) triệu thuế xuất 10%<br> Thu nhập chịu thuế: (trên 120 đến 210)
+            triệu thuế xuất 15%<br> Thu nhập chịu thuế: (trên 210 đến 384) triệu thuế xuất 20%<br> Thu nhập chịu thuế: (trên 384 đến 624) triệu thuế xuất 25%<br> Thu nhập chịu thuế: (trên 624 đến 960) triệu thuế xuất 30%<br> Thu nhập chịu thuế: (trên
+            960) triệu thuế xuất 35%<br>
+
+        </div>
+
+        <div class="form-group d-flex">
+            <input type="text" id="nhapHoTen" class="form-control mr-3" placeholder="Nhập họ tên">
+            <input type="number" id="nhapTien" class="form-control mr-3" placeholder="Tổng thu nhập năm ">
+            <input type="text" id="nhapSoNguoi" class="form-control" placeholder="Số người phụ thuộc">
+        </div>
+        <button class="mt-3 btn btn-success" id="btntinhTienThue">Tính Tiền Thuế</button>
+        <div class="alert alert-primary w-30 mt-3 form-control" id="ketQua_b3"></div>
+
+        <hr>
+
+        <h3>Bài tập 4 : Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng: Nhà dân và doanh nghiệp.
+        </h3>
+
+        <div class="alert alert-primary">
+            1. Nhà dân: • Phí xử lý hóa đơn: 4.5$<br> • Phí dịch vụ cơ bản: 20.5$<br> • Thuê kênh cao cấp: 7.5$ / kênh
+            <br> 2. Doanh nghiệp<br> • Phí xử lý hóa đơn: 15$<br> • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối<br> • Thuê kênh cao cấp: 50$ / kênh<br> ❖ Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng,
+            số kết nối, số kênh cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled
+        </div>
+
+        <div class="form-group d-flex">
+            <select id="selCustomer" onchange="disableInput()" class="form-control mr-3">
+                <option value="">Chọn loại khách hàng</option>
+                <option value="user">Nhà dân</option>
+                <option value="company">Doanh Nghiệp</option>
+            </select>
+            <input type="text" class="form-control mr-3" id="inputId" placeholder="Nhập mã khách hàng">
+            <input type="number" class="form-control mr-3" id="inputChanel" placeholder="Số kênh cao cấp">
+        </div>
+        <input type="number" style="display:none" class="form-control w-25" id="inputConnect" placeholder="Số kết nối">
+        <button class="btn btn-success mt-3" id="btntinhTienCap">Tính Tiền Cáp</button>
+        <div class="alert alert-primary mt-3 form-control" id="ketQua_b4"></div>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
